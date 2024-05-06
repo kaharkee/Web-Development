@@ -1,0 +1,145 @@
+/* main.css used with in Assignment 3 index.html */
+/* Comment for Style sheet */
+
+/* * {
+  margin: 0px;
+  padding: 0px;
+} */
+.frame {
+  margin: auto;
+  border: thick solid blue;
+  padding: 10px;
+  background-color: lightgreen;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: coral;
+  text-shadow: -2px 3px 3px red;
+  flex-direction: row;
+  font-size: 1em;
+  color: blue;
+}
+
+.flex01 {
+  flex: 2;
+  text-align: center;
+  font-size: 2em;
+}
+
+#firstArea:first-letter {
+  font-size: 3em;
+  font-weight: italic;
+  text-shadow: 2px 2px 3px red;
+  color: hotpink;
+  grid-area: firstArea;
+}
+
+#lastArea:first-letter {
+  font-size: 3em;
+  font-weight: italic;
+  text-shadow: 2px 2px 3px green;
+  color: hotpink;
+  grid-area: lastArea;
+}
+
+.imgArea {
+  width: 125px;
+  height: 150px;
+  box-shadow: 10px 10px 10px coral, -10px 10px 10px yellowgreen,
+    -9px -9px 9px hotpink, 10px -10px 10px slateblue;
+  text-align: center;
+  grid-area: imgArea;
+  margin-top: 5px;
+
+  border-radius: none;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "firstArea imgArea lastArea";
+  text-align: center;
+
+  gap: 7px;
+}
+.img1 {
+  width: 70px;
+  height: 50px;
+  border-radius: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
+}
+
+.img2 {
+  width: 150px;
+  height: 150px;
+  border-radius: 0px 50px 0px 50px;
+  margin: 10px;
+}
+#s1 {
+  border-radius: 2px;
+}
+.exContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "a b c d e";
+  row-gap: 25px;
+  column-gap: 25px;
+}
+
+.item1 {
+  grid-area: a;
+  width: 2px;
+  height: 2%;
+  border-radius: 2px;
+}
+.item2 {
+  grid-area: b;
+  width: 2px;
+  height: 2%;
+  border-radius: 2px;
+}
+.item3 {
+  grid-area: c;
+  width: 1px;
+  height: 1%;
+
+  border-radius: 2px;
+}
+.item4 {
+  grid-area: d;
+  width: 2px;
+  height: 2%;
+  border-radius: 2px;
+}
+.item5 {
+  grid-area: e;
+  width: 2px;
+  height: 2%;
+  border-radius: 2px;
+}
+
+.Container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "flower green";
+  justify-items: center;
+}
+
+.flower {
+  grid-area: flower;
+  border-radius: 2px;
+}
+.green {
+  grid-area: green;
+  border-radius: 2px;
+}
+
+#foot {
+  text-align: right;
+}
