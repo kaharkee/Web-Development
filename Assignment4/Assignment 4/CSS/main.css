@@ -1,0 +1,222 @@
+/* main.css used with in Assignment 4 index.html
+Comment for Style sheet */
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+#header {
+  grid-area: header;
+  background-color: navy;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  font-style: italic;
+}
+#personal {
+  grid-area: personal;
+  background-color: lightpink;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.flexItem01 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.flexItem01 label {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.flexItem01 input {
+  flex: 2;
+}
+
+#info {
+  grid-area: info;
+  background-color: lightgray;
+
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.addright {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.addright label {
+  flex: 1;
+  text-align: left;
+  margin-right: 10px;
+}
+
+.addright input[type="number"],
+.addright input[type="color"],
+.addright input[type="radio"],
+.addright select {
+  flex: 2;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+#pick {
+  text-align: left;
+  margin-right: 0cap;
+}
+
+.centre {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.id3 {
+  text-align: center;
+}
+#imageArea {
+  grid-area: imageArea;
+  padding: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.animal_images01 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+
+  /* Larger checkbox size */
+}
+
+.animal_images01 label {
+  flex: 1;
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: rgb(8, 39, 132);
+}
+
+.animal_images01 input {
+  flex: 2;
+  margin-right: 10px;
+}
+
+.animal_images01 img {
+  width: 35px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 1rem;
+}
+
+#action {
+  grid-area: action;
+  text-align: center;
+  background-color: aliceblue;
+  padding: 20px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  margin: 0;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.5em;
+  display: flex;
+}
+
+.submitResetArea input {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  margin-right: 10px;
+}
+input[type="submit"],
+input[type="reset"] {
+  padding: 10px 20px;
+  background-color: lightgrey;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: darkcyan;
+}
+
+.id1 {
+  font-weight: bold;
+  text-align: center;
+}
+#bodyContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+
+  padding: 10px;
+  grid-template-areas:
+    "header header"
+    "personal  info"
+    "imageArea  action";
+}
+
+@media only screen and (max-width: 767px) {
+  /* Mobile Styles */
+  legend {
+    font-size: 1em;
+  }
+
+  label {
+    text-decoration: underline;
+  }
+
+  .flexContainer {
+    margin-bottom: 5px;
+  }
+
+  #header {
+    text-decoration: underline;
+    width: auto;
+    grid-area: header;
+    background-color: aliceblue;
+    color: navy;
+    padding: 25px 0px 25px 0px;
+    font-size: 18px;
+  }
+
+  #personal {
+    grid-area: personal;
+    background-color: lightpink;
+
+    font-weight: bold;
+    font-size: 1em;
+  }
+  #bodyContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "header"
+      "personal"
+      "info"
+      "imageArea"
+      "action";
+    gap: 10px;
+  }
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<!-- Name:-Harkeerat Kaur | Student Id Number:-991608248-->
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/main.css" rel="stylesheet" media="screen" />
+    
+
+    <title>Username-kaharkee</title>
+  </head>
+
+  <body>
+    <form name="kaharkee" id="myForm">
+      <header id="header">
+        Assignment #4 / Fall 2021 / Harkeerat Kaur / 991608248
+      </header>
+      <div id="bodyContainer">
+
+
+        
+      <!-- Personal Information Area -->
+      <fieldset id="personal">
+        <legend>MY PERSONAL INFORMATION</legend>
+        
+        <div class="flexItem01">
+          
+          <label for="lastName">Enter Last Name:</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            required
+            value="Kaur"
+            autofocus size="50"
+           />
+        </div>
+        <div class="flexItem01">
+          <label for="firstName">Enter First Name:</label>
+          <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          required
+          value="Harkeerat"  size="50"
+         
+        />
+      </div>
+     
+      <div class="flexItem01">
+          <label for="studentNumber">Enter Student Number:</label>
+          <input
+            type="text"
+            id="studentNumber"
+            name="studentNumber"
+            placeholder="991608248"  size="50"
+           
+          /></div>
+          <div class="flexItem01">
+          <label for="email"> Enter Student Email:</label>
+          <input
+           type="email"
+           id="email"
+           name="email"
+           placeholder="kaharkee@sheridancollege.ca"  size="50"
+         
+         />
+          </div>
+          <div class="flexItem01">
+          <label for="sheridan">Enter Date Enrolled at Sheridan:</label>
+          <input type="date" id="sheridan" name="sheridan"  size="150" />
+        </div>
+       
+       
+      </fieldset>
+
+      <!-- Additional Information Area -->
+      <fieldset id="info">
+        <legend>ADDITIONAL INFORMATION</legend>
+        <div class="addright">
+          <label for="yearOfBirth"> Enter Year of Birth:</label>
+          <input
+            type="number"
+            id="yearOfBirth"
+            name="yearOfBirth"
+            placeholder="2001"
+          />
+        </div>
+        <div class="addright">
+          <label for="favoriteColor">Favorite Colour?</label>
+          <input type="color" id="favoriteColor" name="favoriteColor"  size="50"/>
+        </div>
+        <div class="centre">
+          <label id="pick">Pick your eye Color:</label>
+
+          <label for="brown"
+            >Brown Eyes
+            <input
+              type="radio"
+              id="brown"
+              name="eyecolor"
+              value="brown"
+              checked
+          /></label>
+          <label for="blue"
+            >Blue Eyes<input
+              type="radio"
+              id="blue"
+              name="eyecolor"
+              value="blue"
+            />
+          </label>
+          <label for="green"
+            >Green Eyes
+            <input type="radio" id="green" name="eyecolor" value="green"
+          /></label>
+        </div>
+        <div class="addright">
+          <label for="hairColor">Pick your hair Colour:</label>
+          <select id="hairColor" name="hairColor">
+            <option value="black">Black</option>
+            <option value="brown">Brown</option>
+            <option value="blonde">Blonde</option>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset id="imageArea">
+        <legend class="id3">SELECT ANIMALS YOU WANT</legend>
+        
+        <div class="animal_images01">
+          <label for="cow">Cow <img src="./images/cow.jpeg" /></label>
+          <input type="checkbox" id="cow" name="animal" value="cow" /></div>
+          <div class="animal_images01">
+          <label for="dog">Dog <img src="./images/dog.jpeg" /></label>
+            
+          <input type="checkbox" id="dog" name="animal" value="dog" /></div>
+          <div class="animal_images01">
+          <label for="cat">Cat <img src="./images/cat.jpeg" /></label>
+          <input type="checkbox" id="cat" name="animal" value="cat" /></div>
+          <div class="animal_images01">
+          <label for="pig">Pig <img src="./images/pig.jpeg" /></label>
+          <input type="checkbox" id="pig" name="animal" value="pig" />
+        </div>
+    
+
+      
+      </fieldset>
+
+      <fieldset id="action">
+        <legend class="id1">SELECT APPROPRIATE ACTION</legend>
+        <div class="submitResetArea">
+          <input
+            type="submit"
+            id="submit"
+            value="Click to Submit Data for Message"
+            autofocus
+          />
+
+          <input
+            type="reset"
+            id="reset"
+            value="Click to Start Over"
+            autofocus
+          />
+        </div>
+      </fieldset>
+    </form>
+  </div>
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var lastName = document.getElementById("lastName").value;
+          var fullName = document.getElementById("firstName").value;
+          var studentNumber = document.getElementById("studentNumber").value;
+          // Replace with your student number
+          window.alert(
+            "Full Name: " +
+              fullName +
+              "\n Last Name: " +
+              lastName +
+              "\n Student Number: " +
+              studentNumber
+          );
+        });
+
+      document.getElementById("myForm").addEventListener("reset", function () {
+        location.reload();
+      });
+    </script>
+  </body>
+</html>
